@@ -1,7 +1,9 @@
 package com.baharudin.quranapp.data.mapper
 
+import com.baharudin.quranapp.data.remote.dto.SurahDetailDto
 import com.baharudin.quranapp.data.remote.dto.SurahDto
 import com.baharudin.quranapp.domain.model.Surah
+import com.baharudin.quranapp.domain.model.SurahDetail
 
 
 fun SurahDto.toSurah() : Surah {
@@ -25,5 +27,31 @@ fun Surah.toSurahDto() : SurahDto {
         revelation = revelation,
         description = description,
         audio = audio
+    )
+}
+
+fun SurahDetailDto.toSurahDetail() : SurahDetail {
+    return SurahDetail(
+        audio = audio,
+        ayahs = ayahs,
+        description = description,
+        name = name,
+        number = number,
+        numberOfAyahs = numberOfAyahs,
+        revelation = revelation,
+        translation = translation
+    )
+}
+
+fun SurahDetail.toSurahDetailDto() : SurahDetailDto {
+    return SurahDetailDto(
+        audio = audio,
+        ayahs = ayahs,
+        description = description,
+        name = name,
+        number = number,
+        numberOfAyahs = numberOfAyahs,
+        revelation = revelation,
+        translation = translation
     )
 }
