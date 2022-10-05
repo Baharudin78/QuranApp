@@ -1,5 +1,9 @@
 package com.baharudin.quranapp.data.remote
 
+import com.baharudin.quranapp.data.remote.dto.SurahDto
+import retrofit2.http.GET
+
 interface QuranApi {
-    //dsds
+    @GET("surahs")
+    suspend fun getAllSurah() : List<SurahDto>
 }
